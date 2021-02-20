@@ -32,4 +32,10 @@ class Client(BaseClient):
 
     def get_last_other_players(self) -> List[Point]:
         # TODO hmmmmmm
-        return [convert_to_point(self.last_server_message)]
+        try:
+            point = convert_to_point(self.last_server_message)
+            self.las_server_point = point
+            return [point]
+        except Exception as exc:
+            print("got exception on parsing incoming message")
+            print(exc)
