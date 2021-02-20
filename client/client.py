@@ -16,7 +16,7 @@ class Client(BaseClient):
         таким образом, клиент по кол-ву позиций понимает сколько игроков в игре ......
     """
     # TODO сомнительно выглядит
-    last_server_message: str = '50,50'
+    last_server_message: str = '100,100'
 
     def send(self, point: Point):
         """
