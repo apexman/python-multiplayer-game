@@ -17,6 +17,7 @@ class Client(BaseClient):
     """
     # TODO сомнительно выглядит
     last_server_message: str = '100,100'
+    las_server_point: Point
 
     def send(self, point: Point):
         """
@@ -39,3 +40,4 @@ class Client(BaseClient):
         except Exception as exc:
             print("got exception on parsing incoming message")
             print(exc)
+            return [self.las_server_point]

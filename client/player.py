@@ -43,6 +43,11 @@ class MainPlayer(Player):
     velx: int = 0
     vely: int = 0
 
+    W_KEY_NAMES = ["w", "ц", "1"]
+    A_KEY_NAMES = ["a", "ф", "2"]
+    S_KEY_NAMES = ["s", "ы", "3"]
+    D_KEY_NAMES = ["d", "в", "4"]
+
     def __init__(self, canvas: Canvas, color: str, starting_point: Point):
         super(MainPlayer, self).__init__(canvas, color, starting_point)
         self.bind_keys()
@@ -66,19 +71,19 @@ class MainPlayer(Player):
     def key_press(self, event):
         print(event)
         pressed_key_name = event.char
-        if pressed_key_name == "a":
+        if pressed_key_name in self.A_KEY_NAMES:
             self.velx = -5
-        if pressed_key_name == "d":
+        if pressed_key_name in self.D_KEY_NAMES:
             self.velx = 5
-        if pressed_key_name == "w":
+        if pressed_key_name in self.W_KEY_NAMES:
             self.vely = -5
-        if pressed_key_name == "s":
+        if pressed_key_name in self.S_KEY_NAMES:
             self.vely = 5
 
     def key_release(self, event):
         print(event)
         released_key_name = event.char
-        if released_key_name == "a" or released_key_name == "d":
+        if released_key_name in self.A_KEY_NAMES or released_key_name in self.D_KEY_NAMES:
             self.velx = 0
-        if released_key_name == "w" or released_key_name == "s":
+        if released_key_name in self.W_KEY_NAMES or released_key_name in self.S_KEY_NAMES:
             self.vely = 0
