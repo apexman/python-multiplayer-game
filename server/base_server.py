@@ -69,5 +69,9 @@ class BaseServer:
             print(exc)
 
     def update_context(self, connection_index: int, data_decode: str):
-        point = convert_to_point(data_decode)
-        POINTS[connection_index] = point
+        try:
+            point = convert_to_point(data_decode)
+            POINTS[connection_index] = point
+        except Exception as exc:
+            print("got exception on parsing incoming message")
+            print(exc)
