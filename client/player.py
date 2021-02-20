@@ -43,10 +43,10 @@ class MainPlayer(Player):
     velx: int = 0
     vely: int = 0
 
-    W_KEY_NAMES = ["w", "ц", "1"]
-    A_KEY_NAMES = ["a", "ф", "2"]
-    S_KEY_NAMES = ["s", "ы", "3"]
-    D_KEY_NAMES = ["d", "в", "4"]
+    W_KEY_NAMES = ["w", "ц", "\uf700"]
+    A_KEY_NAMES = ["a", "ф", "\uf702"]
+    S_KEY_NAMES = ["s", "ы", "\uf701"]
+    D_KEY_NAMES = ["d", "в", "\uf703"]
 
     def __init__(self, canvas: Canvas, color: str, starting_point: Point):
         super(MainPlayer, self).__init__(canvas, color, starting_point)
