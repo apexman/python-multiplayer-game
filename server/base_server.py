@@ -28,6 +28,7 @@ class BaseServer:
                 print("waiting")
                 conn, address = self.server.accept()
                 # обслуживаем соединение в параллельном потоке
+                # TODO used low-level _thread w/o locks
                 _thread.start_new_thread(self.process_new_connection, (conn,))
 
     def process_new_connection(self, connection):

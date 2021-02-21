@@ -14,6 +14,7 @@ class BaseClient:
     connection_index: str = None
 
     def __init__(self):
+        # TODO used low-level _thread w/o locks
         _thread.start_new_thread(self._listen, ())
 
     def on_receive(self, data: str):
