@@ -12,4 +12,4 @@ To start game locally:
 Binding keys - 'wasd' and arrow-keys
 
 ### 2 clients example
-![2 clients example](resources/img.png){:height="50%" width="50%"}
+![2 clients example](resources/img.png)
