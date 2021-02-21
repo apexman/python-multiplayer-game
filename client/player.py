@@ -43,6 +43,7 @@ class MainPlayer(Player):
     velx: int = 0
     vely: int = 0
 
+    # TODO нужно правильно забиндить кнопки
     W_KEY_NAMES = ["w", "ц", "\uf700"]
     A_KEY_NAMES = ["a", "ф", "\uf702"]
     S_KEY_NAMES = ["s", "ы", "\uf701"]
@@ -68,6 +69,7 @@ class MainPlayer(Player):
 
     # region
 
+    # TODO клиент не должен(?) контролировать свою скорость перемещения
     def key_press(self, event):
         print(event)
         pressed_key_name = event.char
